@@ -72,12 +72,16 @@ h1{
 
 .gallery{
   margin-top: 20px;
-  max-width: 100px;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery > * {
+  max-height: 100px;
+  margin: 0;
 }
 
 /*Req 8a, 8b, and 8c*/
