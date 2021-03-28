@@ -1,11 +1,11 @@
-
 body{
   margin: 0;
   padding: 0;
   font-size: 16pt;
-  font-family: 'Raleway', sans-serif;
-  background-image: url('../images/concrete_seamless.png');;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('../images/concrete_seamless.png');
 }
+
 header{
   background: #fff;
   border-bottom: 3px solid #e60000;
@@ -15,6 +15,17 @@ header{
   align-items: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
+}
+
+.pattern {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.pattern > * {
+  align-self: center;
+  height: 20px;
 }
 
 a.skip{
@@ -59,7 +70,8 @@ h1{
 
 .container{
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  place-items: center center;
   /* grid-template-rows: auto auto auto auto; */
   row-gap: 20px;
   -webkit-row-gap: 20px;
@@ -68,6 +80,14 @@ h1{
 .tofu, .slice, .hotpot, .para, .shuangcui, .candied,
 .sour, .siu, .yuntun, .cookies {
   grid-column: 2/span 2;
+}
+
+/*Req 8a, 8b, and 8c*/
+.tofu-image, .slice-image, .hotpot-image, .shuangcui-image,
+.candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
+  grid-column: 1/-1;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .gallery{
@@ -82,14 +102,6 @@ h1{
 .gallery > * {
   max-height: 100px;
   margin: 0;
-}
-
-/*Req 8a, 8b, and 8c*/
-.tofu-image, .slice-image, .hotpot-image, .shuangcui-image,
-.candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
-  grid-column: 1/-1;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 img {
