@@ -182,15 +182,21 @@ footer{
     display: grid;
     grid-template-columns: 2fr 14fr 1fr 6fr 1fr 14fr 2fr;
     place-items: center center;
+    align-items: center;
     /* grid-template-rows: auto auto auto auto; */
     row-gap: 30px;
     -webkit-row-gap: 30px;
   }
 
-  .tofu, .slice, .hotpot, .shuangcui, .candied,
-  .sour, .siu, .yuntun, .cookies {
-    /* height: 80%; */
-    align-self: center;
+  .text {
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text>h2 {
+    margin-bottom: 10px;
   }
 
   .slice, .hotpot, .shuangcui, .candied,
@@ -212,7 +218,6 @@ footer{
   .candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
     width: 100%;
     margin-bottom: 0;
-    align-self: center;
   }
   
   .slice-image, .hotpot-image, .shuangcui-image,
