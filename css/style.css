@@ -8,16 +8,16 @@ body{
 
 header{
   background: #fff;
-  border-bottom: 3px solid #e60000;
+  border-bottom: 3px solid #AA381E;/*#e60000;*/
   /*Your  code here again.*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   margin-bottom: 20px;
 }
 
-.pattern {
+/* .pattern {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -26,7 +26,7 @@ header{
 .pattern > * {
   align-self: center;
   height: 20px;
-}
+} */
 
 a.skip{
   background: white;
@@ -45,24 +45,39 @@ h1{
   line-height: 2;
 }
 
-.nav_links{
+.nav_links {
   /*Your code here again.*/
-  width:100%;
   display: flex;
   flex-direction: column;
 }
 
-.nav_item a{
+.nav_item {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav_item a {
+  max-width: 95%;
   color: black;
   text-decoration: none;
 }
 
+.nav {
+  min-width: 70%;
+}
+
 .bold {
-  font-weight: bold !important;
+  font-weight: bold;
+  background-color:#AA381E;
+}
+
+.bold a {
+  color: rgba(255, 255, 255, .8);
 }
 
 .nav_item a:hover, a:focus{
-  color: #AA381E;
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
@@ -80,6 +95,7 @@ h1{
 .tofu, .slice, .hotpot, .para, .shuangcui, .candied,
 .sour, .siu, .yuntun, .cookies {
   grid-column: 2/span 2;
+  margin-bottom: 50px;
 }
 
 /*Req 8a, 8b, and 8c*/
@@ -131,4 +147,80 @@ footer{
   padding: 30px;
   text-align: center;
   margin-top: 20px;
+}
+
+@media all and (min-width: 1000px){
+  .nav_links{
+    /*Your code here again.*/
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .nav_item {
+    width: 25%;
+  }
+
+  .nav {
+    width: 92%;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 2fr 14fr 1fr 6fr 1fr 14fr 2fr;
+    place-items: center center;
+    /* grid-template-rows: auto auto auto auto; */
+    row-gap: 30px;
+    -webkit-row-gap: 30px;
+  }
+
+  .tofu, .slice, .hotpot, .shuangcui, .candied,
+  .sour, .siu, .yuntun, .cookies {
+    /* height: 80%; */
+    align-self: center;
+  }
+
+  .slice, .hotpot, .shuangcui, .candied,
+  .yuntun, .cookies {
+    grid-column: 2/3;
+  }
+
+  .tofu, .sour, .siu {
+    grid-column: -3/-2;
+  }
+
+  .para {
+    grid-column: 2/-2;
+    max-width: 800px;
+  }
+
+  /*Req 8a, 8b, and 8c*/
+  .tofu-image, .slice-image, .hotpot-image, .shuangcui-image,
+  .candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
+    width: 100%;
+    margin-bottom: 0;
+    align-self: center;
+  }
+  
+  .slice-image, .hotpot-image, .shuangcui-image,
+  .candied-image, .yuntun-image, .cookies-image {
+    grid-column: 4/-2;
+  }
+
+  .tofu-image, .sour-image, .siu-image {
+    grid-column: 2/-4;
+  }
+
+  .hotpot, .hotpot-image, .cookies, .cookies-image, .candied, .candied-image {
+    grid-row: 1/2;
+  }
+
+  .tofu, .tofu-image, .siu, .siu-image, .sour, .sour-image {
+    grid-row: 2/3;
+  }
+
+  .slice, .slice-image, .yuntun, .yuntun-image, .shuangcui-image, .shuangcui {
+    grid-row: 3/4;
+  }
+
 }
