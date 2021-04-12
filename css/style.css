@@ -9,6 +9,9 @@ body{
 header{
   background: #fff;
   border-bottom: 3px solid #AA381E;/*#e60000;*/
+  background-image: url('../images/cloud4.png');
+  background-attachment: fixed;
+  background-size:100%;
   /*Your  code here again.*/
   display: flex;
   flex-direction: column;
@@ -37,6 +40,12 @@ a.skip{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
 }
 
 h1{
@@ -92,7 +101,11 @@ h1{
   -webkit-row-gap: 20px;
 }
 
-.tofu, .slice, .hotpot, .para, .shuangcui, .candied,
+.para {
+  grid-column: 2/span 2;
+}
+
+.tofu, .slice, .hotpot, .shuangcui, .candied,
 .sour, .siu, .yuntun, .cookies {
   grid-column: 2/span 2;
   margin-bottom: 50px;
