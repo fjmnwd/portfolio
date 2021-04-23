@@ -17,7 +17,11 @@ header{
   flex-direction: column;
   align-items: center;
   padding-bottom: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.strong {
+  font-size: 2em;
 }
 
 /* .pattern {
@@ -83,7 +87,7 @@ h1{
 }
 
 .bold a {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255);
 }
 
 .nav_item a:hover, a:focus{
@@ -97,12 +101,8 @@ h1{
   grid-template-columns: 1fr 4fr 4fr 1fr;
   place-items: center center;
   /* grid-template-rows: auto auto auto auto; */
-  row-gap: 20px;
-  -webkit-row-gap: 20px;
-}
-
-.para {
-  grid-column: 2/span 2;
+  row-gap: 30px;
+  -webkit-row-gap: 30px;
 }
 
 .tofu, .slice, .hotpot, .shuangcui, .candied,
@@ -138,7 +138,7 @@ img {
 }
 
 .text{
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .5);
   border: 10px solid black;
   padding: 30px;
   /*Your code here:*/
@@ -147,11 +147,18 @@ img {
 }
 
 .para{
-  background-color: rgba(255, 255, 255, .8);
+  grid-column: 2/span 2;
+  background-color: rgba(255, 255, 255, .5);
   /* border: 10px solid black; */
   padding: 10px;
   /* text-align: center; */
   align-self: center;
+}
+
+.para2 {
+  grid-column: 2/span 2;
+  background-color: transparent;
+  grid-row: 1;
 }
 
 footer{
@@ -184,8 +191,6 @@ footer{
     place-items: center center;
     align-items: center;
     /* grid-template-rows: auto auto auto auto; */
-    row-gap: 30px;
-    -webkit-row-gap: 30px;
   }
 
   .text {
@@ -213,6 +218,14 @@ footer{
     max-width: 800px;
   }
 
+  .para2 {
+    grid-column: 2/-2;
+    background-color: transparent;
+    text-align: justify;
+    grid-row: 1;
+    max-width: 1000px;
+  }
+
   /*Req 8a, 8b, and 8c*/
   .tofu-image, .slice-image, .hotpot-image, .shuangcui-image,
   .candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
@@ -230,15 +243,15 @@ footer{
   }
 
   .hotpot, .hotpot-image, .cookies, .cookies-image, .candied, .candied-image {
-    grid-row: 1/2;
-  }
-
-  .tofu, .tofu-image, .siu, .siu-image, .sour, .sour-image {
     grid-row: 2/3;
   }
 
-  .slice, .slice-image, .yuntun, .yuntun-image, .shuangcui-image, .shuangcui {
+  .tofu, .tofu-image, .siu, .siu-image, .sour, .sour-image {
     grid-row: 3/4;
+  }
+
+  .slice, .slice-image, .yuntun, .yuntun-image, .shuangcui-image, .shuangcui {
+    grid-row: 4/5;
   }
 
 }
