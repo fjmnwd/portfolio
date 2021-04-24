@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Include code for favicon image, three stylesheets, Google Font, and responsive meta tags. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Chinese Food</title>
+  </head>
+  <body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+      <h1>Chinese Food</h1>
+      <nav class="nav">
+        <ul class="nav_links">
+          <li class="nav_item"><a href = "index.html">Introduction</a></li>
+          <li class="nav_item"><a href = "sichuan.html">Sichuan Cuisine</a></li>
+          <li class="nav_item"><a href = "canton.html">Cantonese Cuisine</a></li>
+          <li class="nav_item"><a href = "shandong.html">Shandong Cuisine</a></li>
+          <li class="nav_item bold"><a href = "contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main id="main">
+        <form class="container" action="https://formspree.io/f/xjvjkdbz" method="POST">
+            <label class="name" >
+                Your name/nickname: <br/><br/>
+                <input type="text" name="name" placeholder="Avatar" required>
+            </label>
+            <label class="email" >
+                Your email: <br/><br/>
+                <input type="email" name="_replyto" placeholder="Avatar@blabla.com" required>
+            </label>
+            <label class="message" >
+                Your message: <br/><br/>
+                <textarea name="message" placeholder="Hello, my friend!" required></textarea>
+            </label>
+
+            <button class="submit" type="submit">Send</button>
+        </form>
+    </main>
+    <footer>
+      <p>University of Michigan School of Information <br/>
+        &copy; Yang Yu - Web Design 2021</p>
+    </footer>
+  </body>
+</html>
