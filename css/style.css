@@ -227,19 +227,19 @@ footer{
 }
 
 .name{
-  grid-row: 1;
+  grid-row: 1/2;
 }
 
 .email{
-  grid-row: 2;
+  grid-row: 2/3;
 }
 
 .message{
-  grid-row: 3;
+  grid-row: 3/4;
 }
 
 .submit{
-  grid-row: 4;
+  grid-row: 4/5;
 }
 
 .name, .email, .message, .submit {
@@ -272,13 +272,30 @@ textarea {
   h1 {
     animation: none;
   }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(0deg);
+  }
 }
 
-@media all and (min-width: 1000px){
+@media all and (min-width: 600px){
   .nav_links{
-    display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     flex-direction: row;
+  }
+  .nav_item {
+    min-width: 200px;
+  }
+
+  .tofu-image, .slice-image, .hotpot-image, .shuangcui-image,
+  .candied-image, .sour-image, .siu-image, .yuntun-image, .cookies-image {
+    max-width: 80%;
+  }
+}
+
+@media all and (min-width: 1050px){
+  .nav_links{
+    flex-wrap: nowrap;
   }
 
   .nav_item {
